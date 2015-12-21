@@ -1,0 +1,53 @@
+<html ng-app="myApp">
+<head>
+
+<meta charset="utf-8">
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-resource/angular-resource.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="script/user.js"></script>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+<link href="css/font-awesome.css" rel="stylesheet">
+<link href="css/font-awesome-ie7.css" rel="stylesheet">
+<link href="css/boot-business.css" rel="stylesheet">
+</head>
+<body>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a href="index.html" class="brand brand-bootbus">Vente des
+					Immobiliers</a>
+
+			</div>
+		</div>
+
+	</div>
+
+	<div ng-controller="annoncesCtrl">
+
+		<h2>Annonce List</h2>
+
+		<table>
+			<th>Tilte</th>
+			<th>Description</th>
+			<th>Emplacement</th>
+			<th>Price</th>
+			<th>surface</th>
+			<th>user</th>
+			<tr ng-repeat="annonce in annonces">
+				<td>{{annonce.title}}</td>
+				<td>{{annonce.description}}</td>
+				<td>{{annonce.emplacement}}</td>
+				<td>{{annonce.prix}}</td>
+				<td>{{annonce.surface}}</td>
+				<td>{{annonce.user_id}}</td>
+			</tr>
+		</table>
+	<a href="addAnnonce.html"> Ajout d'une annonce</a>
+	</div>
+
+</body>
+</html>
