@@ -1,0 +1,10 @@
+fr/universite/bordeaux/repositories/AnnonceRepository.class
+fr/universite/bordeaux/entities/Picture.class
+fr/universite/bordeaux/entities/Annonce.class
+fr/universite/bordeaux/resources/AnnonceResource.class
+fr/universite/bordeaux/ApplicationConfig.class
+fr/universite/bordeaux/resources/PictureResource.class
+fr/universite/bordeaux/entities/User.class
+fr/universite/bordeaux/repositories/PictureRepository.class
+fr/universite/bordeaux/repositories/UserRepository.class
+fr/universite/bordeaux/resources/UserResource.class
