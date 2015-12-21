@@ -3,7 +3,7 @@
 
 Le projet est de concevoir une application web de gestion de ventes immobilières.
 
-1. ** Inscription :** Un internaute peut s’inscrire au site en saisissant simplement un mail et un mot de passe. 
+1. **Inscription :** Un internaute peut s’inscrire au site en saisissant simplement un mail et un mot de passe. 
 2. Une fois que l’utilisateur se connect il peut accéder à son espace privé qui lui permet :
 
 * de pouvoir ajouter des informations personnelles comme son téléphone, son adresse, son nom, 
