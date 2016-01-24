@@ -7,7 +7,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.websocket.server.PathParam;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 
 import fr.universite.bordeaux.entities.Annonce;
@@ -15,30 +17,44 @@ import fr.universite.bordeaux.entities.User;
 
 @Stateless
 public class AnnonceRepository {
-    private static final String JPQL_SELECT_PAR_EMAIL = "SELECT a FROM Annonce a WHERE a.user=:user";
-    private static final String PARAM_USER = "user";
-    @PersistenceContext(unitName = "aldaPersistenceUnit")
-    private EntityManager entityManager;
+	private static final String JPQL_SELECT_PAR_EMAIL = "SELECT a FROM Annonce a WHERE a.user=:user";
+	private static final String PARAM_USER = "user";
+	@PersistenceContext(unitName = "aldaPersistenceUnit")
+	private EntityManager entityManager;
 
-    public void addAnnonce(Annonce annonce){
-        entityManager.persist(annonce);
-    }
+	public void addAnnonce(Annonce annonce){
+		entityManager.persist(annonce);
+	}
 
-    public List<Annonce> findAnnoncesByUser(User user) {
-        Query requete = entityManager.createQuery(JPQL_SELECT_PAR_EMAIL);
-        requete.setParameter(PARAM_USER, user);
-        @SuppressWarnings("unchecked")
-        List<Annonce> annonces = (List<Annonce>)requete.getResultList();
-        return annonces;
-    }
-    @SuppressWarnings("unchecked")
- 	public List<Annonce> getAllTheAnnonces(){
- 		return entityManager.createNativeQuery("select * from Annonce", Annonce.class)
-                 .getResultList();
- 	}
-     @GET
-     @Path("{id}")
-     public Annonce getAnnonce( @PathParam("id") Long id) {
-         return entityManager.find(Annonce.class, id);
-     }
+	public List<Annonce> findAnnoncesByUser(User user) {
+		Query requete = entityManager.createQuery(JPQL_SELECT_PAR_EMAIL);
+		requete.setParameter(PARAM_USER, user);
+		@SuppressWarnings("unchecked")
+		List<Annonce> annonces = (List<Annonce>)requete.getResultList();
+		return annonces;
+	}
+	@SuppressWarnings("unchecked")
+	public List<Annonce> getAllTheAnnonces(){
+		return entityManager.createNativeQuery("select * from Annonce", Annonce.class)
+				.getResultList();
+	}
+	@GET
+	@Path("{id}")
+	public Annonce getAnnonce( @PathParam("id") Long id) {
+		return entityManager.find(Annonce.class, id);
+	}
+	@PUT
+	@Path("{id}")
+	public void updateAnnonce(Annonce annonce){
+
+		entityManager.merge(annonce);
+	}
+	@DELETE
+	@Path("{id}")
+	public void deleteAnnonce(int id){
+		Query requete = entityManager.createNativeQuery("select * from Announcement where id='"+id+"'", Annonce.class);
+		//User user = (User) requete.getSingleResult();
+		Annonce annonce = (Annonce) requete.getSingleResult();
+		entityManager.remove(annonce);
+	}
 }

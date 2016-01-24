@@ -1,5 +1,5 @@
 //factory qui permet de recupere un utilisateur par mail
-app.factory('userFact', ['$resource', function($resource){
+app.factory('userFactory', ['$resource', function($resource){
 	return $resource('http://localhost:8181/aldaProject/alda/users/:email',{email : '@email'},
 			{
 		'get':    {method:'GET',isArray:true }

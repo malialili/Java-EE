@@ -10,6 +10,7 @@ import javax.ws.rs.core.Application;
 
 import fr.universite.bordeaux.resources.AnnonceResource;
 import fr.universite.bordeaux.resources.PictureResource;
+import fr.universite.bordeaux.resources.SearchCriterionResource;
 import fr.universite.bordeaux.resources.UserResource;
 
 @ApplicationPath("alda")
@@ -31,6 +32,7 @@ public class ApplicationConfig extends Application{
         resources.add(UserResource.class);
         resources.add(AnnonceResource.class);
         resources.add(PictureResource.class);
+        resources.add(SearchCriterionResource.class);
         //==> we could also choose packages, see below getProperties()
         
         System.out.println("REST configuration ended successfully.");

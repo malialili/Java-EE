@@ -3,23 +3,16 @@
 
 <meta charset="utf-8">
 
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-resource/angular-resource.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="script/user.js"></script>
+
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
 <link href="css/font-awesome.css" rel="stylesheet">
 <link href="css/font-awesome-ie7.css" rel="stylesheet">
 <link href="css/boot-business.css" rel="stylesheet">
-
-<link data-require="bootstrap-css@3.0.1" data-semver="3.0.1" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" /> 
-<script src="http://code.angularjs.org/1.2.5/angular.js" data-semver="1.2.5" data-require="angular.js@1.2.5"></script>
-<script data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-<script data-require="bootstrap@3.0.1" data-semver="3.0.1" src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
-
-<script src="bower_components/angular-resource/angular-resource.min.js"></script>
-<script src="bower_components/angular-route/angular-route.js">
-
-<script src="script/user.js"></script>
-
-
 </head>
 <body>
 	<div class="navbar navbar-fixed-top">
@@ -27,18 +20,15 @@
 			<div class="container">
 				<a href="index.html" class="brand brand-bootbus">Vente des
 					Immobiliers</a>
-				</div>
+
 			</div>
 		</div>
+
+	</div>
 	<div ng-controller="registerCtrl">
 		<div class="content" >
-		
-
 				<h1>Inscription</h1>
-			</div>
-		
-
-				
+			</div>				
 					<div class="center-align">
 						<form class="form-horizontal form-signin-signup" ng-controller="registerCtrl">
 

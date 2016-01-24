@@ -1,0 +1,45 @@
+<section data-ng-controller="personneController" data-ng-init="find()">
+    <div class="panel panel-green">
+       <div class="panel-heading">Utilisateurs</div>
+       <div class="panel-body">
+           <table class="table table-hover table-bordered">
+               <thead>
+               <tr>
+                   <th>#</th>
+                   <th>Prenom</th>
+                   <th>Nom</th>
+                   <th>Adresse</th>
+                   <th>Ville</th>
+                   <th>Telephone</th>
+                   <th>Email</th>
+                   <th>Options</th>
+               </tr>
+               </thead>
+               <tbody>
+	               <tr data-ng-repeat="personne in personnes">
+	                   <td>{{personne.id}}</td>
+	                   <td>{{personne.prenom}}</td>
+	                   <td>{{personne.nom}}</td>
+	                   <td>{{personne.adresse}}</td>
+	                   <td>{{personne.ville}}</td>
+	                   <td>{{personne.tel}}</td>
+	                   <td>{{personne.mail}}</td>
+	                   <td>
+	                       <a href="#!/personnes/{{personne._id}}/edit" >
+	                       <button class="btn btn-warning btn-edit">Modifier</button>
+                           </a>
+                           <a href="#!/personnes/{{personne._id}}">
+                              <button class="btn btn-danger btn-delete" data-ng-click="delete();">Supprimer</button> 
+                           </a>
+                       </td>
+	               </tr>
+               </tbody>
+           </table>
+       </div>
+   </div>
+   <div>
+        <a href="#!/personnes/create">
+            <button id="btn-add" class="btn btn-primary" ng-click="nouveau()">Nouveau</button>
+        </a>
+   </div>	
+</section>

@@ -4,9 +4,12 @@ import java.util.Date;
 import java.util.List;
 
 import javax.ejb.EJB;
+import javax.websocket.server.PathParam;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
@@ -30,18 +33,31 @@ public class AnnonceResource {
 	}
     @GET
     @Produces({MediaType.APPLICATION_JSON})
-    public List<Annonce> getAnnoncesByUser(){
-        User user = userRepository.findUserByEmail("malia.mias@yahoo.fr");
+    public List<Annonce> getAnnoncesByUser(String email){
+        User user = userRepository.findUserByEmail(email);
         return annonceRepository.findAnnoncesByUser(user);
     }
     
     @POST
     @Path("/addAnnonce")
     @Consumes("application/json")
-    public void  addUser(Annonce annonce){
+    public void  addAnnonce(Annonce annonce){
         User user = userRepository.findUserByEmail("malia.lili1@gmail.com");
-        annonce.setCreatedDate(new Date());
         annonce.setUser(user);
         annonceRepository.addAnnonce(annonce);
     }
+    @PUT
+	@Path("/updateAnnonce")
+	@Consumes("application/json")
+	@Produces({MediaType.APPLICATION_JSON})
+	//@Produces("text/plain")
+	public void  updateAnnonce(Annonce annonce, String email){
+    	annonceRepository.updateAnnonce(annonce);		 
+	}
+	
+	@DELETE
+	@Path("{id}")	
+	public void deleteUser(@PathParam("id")int id){
+		annonceRepository.deleteAnnonce(id);
+	}
 }

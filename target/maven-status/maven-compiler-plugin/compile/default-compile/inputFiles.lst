@@ -1,10 +1,13 @@
-/home/malia/workspace/aldaProject/src/main/java/fr/universite/bordeaux/repositories/UserRepository.java
-/home/malia/workspace/aldaProject/src/main/java/fr/universite/bordeaux/entities/Picture.java
 /home/malia/workspace/aldaProject/src/main/java/fr/universite/bordeaux/ApplicationConfig.java
+/home/malia/workspace/aldaProject/src/main/java/fr/universite/bordeaux/entities/Picture.java
+/home/malia/workspace/aldaProject/src/main/java/fr/universite/bordeaux/repositories/UserRepository.java
 /home/malia/workspace/aldaProject/src/main/java/fr/universite/bordeaux/resources/AnnonceResource.java
+/home/malia/workspace/aldaProject/src/main/java/fr/universite/bordeaux/entities/SearchCriterion.java
 /home/malia/workspace/aldaProject/src/main/java/fr/universite/bordeaux/repositories/AnnonceRepository.java
 /home/malia/workspace/aldaProject/src/main/java/fr/universite/bordeaux/entities/Annonce.java
-/home/malia/workspace/aldaProject/src/main/java/fr/universite/bordeaux/repositories/PictureRepository.java
-/home/malia/workspace/aldaProject/src/main/java/fr/universite/bordeaux/resources/PictureResource.java
 /home/malia/workspace/aldaProject/src/main/java/fr/universite/bordeaux/resources/UserResource.java
+/home/malia/workspace/aldaProject/src/main/java/fr/universite/bordeaux/resources/PictureResource.java
+/home/malia/workspace/aldaProject/src/main/java/fr/universite/bordeaux/resources/SearchCriterionResource.java
+/home/malia/workspace/aldaProject/src/main/java/fr/universite/bordeaux/repositories/PictureRepository.java
+/home/malia/workspace/aldaProject/src/main/java/fr/universite/bordeaux/repositories/SearchCriterionRepository.java
 /home/malia/workspace/aldaProject/src/main/java/fr/universite/bordeaux/entities/User.java

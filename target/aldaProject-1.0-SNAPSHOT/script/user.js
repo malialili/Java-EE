@@ -24,6 +24,11 @@ app.controller('usersCtrl', ['$scope', '$http', function ($scope, $http) {
     	  $scope.users = response.data;
     	});
 }])
+
+appa.controller('userCtrl', function($scope, $resource){
+	var User=$resource('http://localhost:8181/aldaProject/alda/users/{email}');
+	users= User.query();
+})
 /*
 //add user
 app.controller('registerCtrl', ['$scope','$http', function($scope, $http){
