@@ -4,6 +4,8 @@ back-end: java ee
 
 front-end : AngularJS
 
+port de TomEE: 8181
+
 ##Une application web — Ventes des immobiliers##
 
 Le projet est de concevoir une application web de gestion de ventes immobilières.
