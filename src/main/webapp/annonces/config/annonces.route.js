@@ -6,16 +6,16 @@ angular.module('annonces').config(['$routeProvider',
 	function($routeProvider) {
 		$routeProvider.
 		when('/annonces', {
-			templateUrl: 'annonces/views/list-annonces.client.view.html'
+			templateUrl: 'annonces/views/list-annonces.view.html'
 		}).
 		when('/annonces/create', {
-			templateUrl: 'annonces/views/create-annonce.client.view.html'
+			templateUrl: 'annonces/views/create-annonce.view.html'
 		}).
 		when('/annonces/:personneId', {
-			templateUrl: 'annonces/views/view-annonce.client.view.html'
+			templateUrl: 'annonces/views/view-annonce.view.html'
 		}).
 		when('/annonces/:personneId/edit', {
-			templateUrl: 'annonces/views/edit-annonce.client.view.html'
+			templateUrl: 'annonces/views/edit-annonce.view.html'
 		});
 	}
 ]);
