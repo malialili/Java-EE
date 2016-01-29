@@ -1,0 +1,81 @@
+<section data-ng-controller="personneController">
+    <div class="panel panel-green">
+        <div class="panel-heading">Utilisateur</div>
+        <div class="panel-body pan">
+          <form data-ng-submit="create()" novalidate>
+            <div class="form-body pal">
+
+                   <div class="form-group">
+                       <label for="inputName" class="control-label">Prenom</label>
+                       <div class="input-icon right">
+                           <i class="fa fa-user"></i>
+                           <input id="inputName" type="text" data-ng-model="prenom" placeholder="Prenom" class="form-control" />
+                       </div>
+                   </div>
+                    
+                   <div class="form-group">
+                       <label for="inputName" class="control-label">Nom</label>
+                       <div class="input-icon right">
+                           <i class="fa fa-user"></i>
+                           <input id="inputName" type="text" data-ng-model="nom" placeholder="Nom" class="form-control" />
+                       </div>
+                   </div>
+         
+                   <div class="form-group">
+                       <label for="inputEmail" class="control-label">E-mail</label>
+                       <div class="input-icon right">
+                           <i class="fa fa-envelope"></i>
+                           <input id="inputEmail" type="text" data-ng-model="mail" placeholder="E-mail" class="form-control" />
+                       </div>
+                   </div>
+                  
+                   <div class="form-group">
+                       <label for="inputEmail" class="control-label">Password</label>
+                       <div class="input-icon right">
+                           <i class="fa fa-lock"></i>
+                           <input id="inputEmail" data-ng-model="pass" type="text" placeholder="Password" class="form-control" />
+                       </div>
+                   </div>                   
+
+                <div class="form-group">
+                        <label for="inputEmail" class="control-label">Confirm Password</label>
+                        <div class="input-icon right">
+                        <i class="fa fa-lock"></i>
+                        <input id="inputConfirmPassword" type="password" placeholder="Confirm Password" class="form-control" /></div>
+                </div> 
+
+                <div class="form-group">
+                    <label for="inputEmail" class="control-label">Telephone</label>
+                    <div class="input-icon right">
+                        <i class="fa fa-phone"></i>
+                        <input id="inputPhone" type="phone" data-ng-model="tel" placeholder="Telephone" class="form-control" />
+                    </div>
+                </div>
+                           
+                <div class="form-group">
+                    <label for="inputSubject" class="control-label">Ville</label>
+                    <div class="input-icon right">
+                        <i class="fa fa-user"></i>
+                        <input id="inputSubject" type="text" data-ng-model="ville" placeholder="Ville" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputMessage" class="control-label" placeholder="Adresse" >Adresse</label>
+                    <textarea rows="5" class="form-control" data-ng-model="adresse" placeholder="Adresse"></textarea>
+                </div>
+	            <div class="form-group">
+	                 <select class="form-control" data-ng-model="role" ng-options="role as role.nom for role in roles">
+	                     <option>Gender</option>
+	                     <option value="0">Male</option>
+	                     <option value="1">Female</option>
+	                     <option value="2">Other</option>
+	                 </select>
+	            </div>
+	            <div class="form-actions text-right pal">
+                    <button type="submit" class="btn btn-primary">Enregistre</button>
+                </div>                
+            </div>
+           </form>
+        </div>
+    </div>
+</section>
